@@ -1,8 +1,8 @@
 import {Restaurant} from "./restaurant/restaurant.model"
 
-export class RestaurantService {
+export class RestaurantsService {
 	
-	rests: Restaurant[
+	rests: Restaurant[] = [
 	  {
       id: "bread-bakery",
       name: "Bread & Bakery",
@@ -18,12 +18,11 @@ export class RestaurantService {
       deliveryEstimate: "100m",
       rating: 3.5,
       imagePath: "assets/img/restaurants/burgerhouse.png"
-    },
-  ]
+    }]
 
 	constructor(){}
 
 	restaurants(): Restaurant[] {
-		return this rests;
+		return this.rests;
 	}
 }
